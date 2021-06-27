@@ -1,4 +1,7 @@
 # sensors
+
+I am aware this is already a feature of lm-sensors, I just thought it would be fun to code my own.
+
 **Instructions for installation:**
 
 ONLY TESTED ON POP OS, will probably work on other distributions although installing packages may be different
