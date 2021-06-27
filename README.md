@@ -14,3 +14,7 @@ ONLY TESTED ON POP OS, will probably work on other distributions although instal
 **Use:**
 
 from your home directory run `./sensors.sh`
+
+
+*This software is distributed free of charge by a not-for-profit entity. You use this software at your own risk and I will accept no liability to any damage to the computer or any financial loss incurred by software malfunction.
+*
