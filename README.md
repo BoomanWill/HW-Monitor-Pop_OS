@@ -28,7 +28,7 @@ with step 6: run `ALIASNAME "arg 1" "arg 2" etc.`
 
 args can be:
 
-Tctl, Tdie, Tccd1 - variations on CPU temperature#
+Tctl, Tdie, Tccd1 - variations on CPU temperature
 
 in0-14 - voltages
 
