@@ -23,7 +23,9 @@ where ALIASNAME is what you want to call the command
 **Use:**
 
 without step 6: from your home directory run `sudo python3 pythonsensors.py "arg 1" "arg 2" etc.`
+
 with step 6: run `ALIASNAME "arg 1" "arg 2" etc.`
+
 args can be:
 Tctl, Tdie, Tccd1 - variations on CPU temperature
 in0-14 - voltages
