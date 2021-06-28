@@ -37,6 +37,8 @@ fan1-6 - fan speeds
 
 and others found if you just type sensors.
 
+if no arguments given, all sensors shown
+
 
 
 *This software is distributed free of charge by a not-for-profit entity. You use this software at your own risk and I will accept no liability to any damage to the computer or any financial loss incurred by software malfunction.*
