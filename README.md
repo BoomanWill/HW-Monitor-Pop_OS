@@ -27,9 +27,13 @@ without step 6: from your home directory run `sudo python3 pythonsensors.py "arg
 with step 6: run `ALIASNAME "arg 1" "arg 2" etc.`
 
 args can be:
-Tctl, Tdie, Tccd1 - variations on CPU temperature
+
+Tctl, Tdie, Tccd1 - variations on CPU temperature#
+
 in0-14 - voltages
+
 fan1-6 - fan speeds
+
 and others found if you just type sensors.
 
 
