@@ -1,19 +1,58 @@
-import keyboard
-import time
+import sys
 import os
+import time
+import keyboard
 
-os.system('wmctrl -r \':ACTIVE:\' -b toggle,fullscreen') #toggles fullscreen for the terminal window
-while True:
-    if not keyboard.is_pressed('q'):  #checks that q is not pressed, then repeats sensors every 0.1s
-        os.system('echo \'PRESS Q TO EXIT\'')
-        os.system('clear')
-        os.system('sensors')
-        os.system('echo \'PRESS Q TO EXIT\'')
-        time.sleep(0.1)
-        continue
-    else:
-        os.system('wmctrl -r \':ACTIVE:\' -b toggle,fullscreen') #untoggles fullscreen when q is pressed and exits the program
-        exit()
+arg = sys.argv
+
+def getAll():
+    os.system('wmctrl -r \':ACTIVE:\' -b toggle,fullscreen')
+    while True:
+        if not keyboard.is_pressed('q'):
+            os.system('echo \'PRESS Q TO EXIT\'')
+            os.system('clear')
+            os.system('sensors')
+            os.system('echo \'PRESS Q TO EXIT\'')
+            time.sleep(0.1)
+            continue
+        else:
+            os.system('wmctrl -r \':ACTIVE:\' -b toggle,fullscreen')
+            exit()
+
+def getSensors():
+    global arg
+    n = 1
+    string = 'sensors | grep \'' 
+    for i in range(len(arg) - 1):
+        indstring = str(arg[n]) + '\|'
+        string = string + indstring
+        n += 1
+
+    string = string[:-2]
+    string = string + '\''
+        
+
+
+    os.system('wmctrl -r \':ACTIVE:\' -b toggle,fullscreen')
+    while True:
+        if not keyboard.is_pressed('q'):
+            os.system('echo \'PRESS Q TO EXIT\'')
+            os.system('clear')
+            os.system(string)
+            os.system('echo \'PRESS Q TO EXIT\'')
+            time.sleep(0.1)
+            continue
+        else:
+            os.system('wmctrl -r \':ACTIVE:\' -b toggle,fullscreen')
+            exit()
+
+
+if len(arg) == 1:
+    getAll()
+else:
+    getSensors()
+
+
 
 
 
