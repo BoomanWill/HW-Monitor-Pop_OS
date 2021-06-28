@@ -10,11 +10,37 @@ ONLY TESTED ON POP OS, will probably work on other distributions although instal
 3) in the terminal cd to sensors-main
 4) run `sudo chmod +x setup.sh`
 5) run `./setup.sh`
+6) If you want to just run one command: 
+6a) create a file called .bash_aliases in your home directory
+6b) add the following lines to it:
+```
+#!/bin/bash
+ALIASNAME(){
+sudo python3 pythonsensors.py $@
+}
+```
+where ALIASNAME is what you want to call the command
 
 **Use:**
 
-from your home directory run `./sensors.sh`
+without step 6: from your home directory run `sudo python3 pythonsensors.py "arg 1" "arg 2" etc.`
+
+with step 6: run `ALIASNAME "arg 1" "arg 2" etc.`
+
+args can be:
+
+Tctl, Tdie, Tccd1 - variations on CPU temperature
+
+in0-14 - voltages
+
+fan1-6 - fan speeds
+
+and others found if you just type sensors.
+
+if no arguments given, all sensors shown
+
 
 
 *This software is distributed free of charge by a not-for-profit entity. You use this software at your own risk and I will accept no liability to any damage to the computer or any financial loss incurred by software malfunction.*
+
 
