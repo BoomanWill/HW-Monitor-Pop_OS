@@ -13,7 +13,8 @@ ONLY TESTED ON POP OS, will probably work on other distributions although instal
 6) If you want to just run one command: 
 6a) create a file called .bash_aliases in your home directory
 6b) add the following lines to it:
-```#!/bin/bash
+```
+#!/bin/bash
 ALIASNAME(){
 sudo python3 pythonsensors.py $@
 }
