@@ -2,5 +2,5 @@
 sudo apt-get install python3-pip
 sudo apt-get install wmctrl
 sudo pip install keyboard
-sudo mv pythonsensors.py ~
+sudo mv hwmonitor.py ~
 
