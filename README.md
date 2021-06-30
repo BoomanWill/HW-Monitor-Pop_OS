@@ -1,6 +1,5 @@
-# sensors
+# HWMonitor for Ubuntu
 
-I am aware this is already a feature of lm-sensors, I just thought it would be fun to code my own.
 
 **Instructions for installation:**
 
