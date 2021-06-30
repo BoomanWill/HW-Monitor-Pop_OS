@@ -1,4 +1,4 @@
-# HWMonitor for Ubuntu
+# HWMonitor for Pop_OS
 
 
 ## Instructions for installation: ##
@@ -27,7 +27,7 @@ without step 6: from your home directory run `sudo python3 hwmonitor.py`
 with step 6: run `ALIASNAME`
 
 ## Description: ##
-HW-Monitor-Ubuntu is a hardware monitor designed for Ubuntu.  It shows, CPU temp, GPU temp, NVME temp, Vcore, Vbat, SYSTIN, CPUTIN, AUXTIN0, AUXTIN2 and SMSUBMASTER, along with the high values.
+HW-Monitor-Pop_OS is a hardware monitor designed for Pop_OS.  It shows, CPU temp, GPU temp, NVME temp, Vcore, Vbat, SYSTIN, CPUTIN, AUXTIN0, AUXTIN2 and SMSUBMASTER, along with the high values.
 
 *This software is distributed free of charge by a not-for-profit entity. You use this software at your own risk and I will accept no liability to any damage to the computer or any financial loss incurred by software malfunction.*
 
