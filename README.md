@@ -16,28 +16,17 @@ ONLY TESTED ON POP OS, will probably work on other distributions although instal
 ```
 #!/bin/bash
 ALIASNAME(){
-sudo python3 pythonsensors.py $@
+sudo python3 pythonsensors.py
 }
 ```
 where ALIASNAME is what you want to call the command
 
 **Use:**
 
-without step 6: from your home directory run `sudo python3 pythonsensors.py "arg 1" "arg 2" etc.`
+without step 6: from your home directory run `sudo python3 pythonsensors.py`
 
-with step 6: run `ALIASNAME "arg 1" "arg 2" etc.`
+with step 6: run `ALIASNAME`
 
-args can be:
-
-Tctl, Tdie, Tccd1 - variations on CPU temperature
-
-in0-14 - voltages
-
-fan1-6 - fan speeds
-
-and others found if you just type sensors.
-
-if no arguments given, all sensors shown
 
 
 
