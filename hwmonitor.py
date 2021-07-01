@@ -4,6 +4,8 @@ import subprocess
 import keyboard
 import matplotlib.pyplot as plt
 import psutil
+import platform
+
 
 def getinfo():
     cpuhigh = 0
@@ -21,11 +23,21 @@ def getinfo():
     cpuusehigh = 0
     cpufreqhigh = 0
     cpugraph = []
+    cpuusegraph = []
     gpugraph = []
     nvmegraph = []
     smbusgraph = []
     timelist = []
+    memgraph = []
     timenum = 0 
+    uname = platform.uname()
+
+    system = subprocess.getoutput('neofetch | grep x86')
+    system = system[-25:-12]
+
+    cpucount = psutil.cpu_count()
+    totram = round(psutil.virtual_memory().total / 1000000000, 3)
+    architecture = uname.processor
 
     while True:
         if not keyboard.is_pressed('q'):
@@ -40,11 +52,13 @@ def getinfo():
             cpuusage = psutil.cpu_percent(0.1)
             if cpuusage > cpuusehigh:
                 cpuusehigh = cpuusage
+            cpuusegraph.append(cpuusage)
 
             memusage = psutil.virtual_memory()[3]
             memusage = round(memusage / 1000000000, 2)
             if memusage > memhigh:
                 memhigh = memusage
+            memgraph.append(psutil.virtual_memory()[2])
 
             cputemp = subprocess.getoutput('sensors | grep Tccd1')
             cputemp = float(cputemp[-8:-4])
@@ -122,6 +136,9 @@ def getinfo():
             print('-------------------------------------------------------------------------------')
             print('SMBUSMASTER: {}C | HIGH:   {}C'.format(smbusmaster, smbusmasterhigh))
             print('-------------------------------------------------------------------------------')
+            print('='*30, 'System Info', '='*30)
+            print('CPU Count: {}    Total RAM:   {}GB'.format(cpucount, totram))
+            print('System:  {}   Architecture:   {}'.format(system, architecture))
             print('Press Q to exit')
             time.sleep(0.01)
         else:
@@ -131,7 +148,9 @@ def getinfo():
             plt.plot(timelist, gpugraph, label='GPU')
             plt.plot(timelist, nvmegraph, label='NVME')
             plt.plot(timelist, smbusgraph, label='SMBUSMASTER')
-            plt.ylabel('Temp(C)')
+            plt.plot(timelist, cpuusegraph, label='CPU Usage')
+            plt.plot(timelist, memgraph, label='Memory Usage')
+            plt.ylabel('Temp(C) / Usage %')
             plt.axis([0, timelist[-1], 0, 100])
             plt.legend()
             plt.show()
@@ -141,4 +160,3 @@ def getinfo():
 
 
 getinfo()
-
