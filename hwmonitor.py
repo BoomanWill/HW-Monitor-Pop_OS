@@ -149,7 +149,7 @@ def getinfo():
             plt.plot(timelist, nvmegraph, label='NVME')
             plt.plot(timelist, smbusgraph, label='SMBUSMASTER')
             plt.plot(timelist, cpuusegraph, label='CPU Usage')
-            plt.plot(timelist, memgraph, label='Memory Usage')
+            plt.plot(timelist, memgraph, label='Memory Usage %')
             plt.ylabel('Temp(C) / Usage %')
             plt.axis([0, timelist[-1], 0, 100])
             plt.legend()
