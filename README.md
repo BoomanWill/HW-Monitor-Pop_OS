@@ -6,7 +6,7 @@
 ONLY TESTED ON POP_OS, will probably work on other distributions although installing packages may be different.
 1) make sure lm-sensors is installed (`sudo apt-get install lm-sensors`, `sensors-detect`, hit enter to go with default options for everything)
 2) download and extract the .zip
-3) in the terminal cd to HW-Monitor-Ubuntu-main
+3) in the terminal cd to HW-Monitor-Pop_OS-main
 4) run `sudo chmod +x setup.sh`
 5) run `./setup.sh`
 6) If you want to just run one command: 
