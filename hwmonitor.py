@@ -162,4 +162,4 @@ def getinfo():
 getinfo()
 
 
-#made by github.com/BoomanWill
+#made by https://github.com/BoomanWill
